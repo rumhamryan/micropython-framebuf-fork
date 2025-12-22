@@ -22,7 +22,7 @@ print("Variable offset fixed length " + ("OK" if ok else "FAIL"))
 # this takes around 30s to run, so skipped if already failing
 if ok:
     for op_len in range(1, 66):
-        wr = b"\xFF" * op_len
+        wr = b"\xff" * op_len
         for offs in range(1, len(buf) - op_len - 1):
             # Place some "sentinel" values before and after the DMA buffer
             before = offs & 0xFF
